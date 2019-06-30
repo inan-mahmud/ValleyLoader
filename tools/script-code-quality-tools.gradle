@@ -1,0 +1,67 @@
+codeQualityTools {
+    boolean failEarly = true
+    boolean xmlReports = false
+    boolean htmlReports = true
+    boolean textReports = false
+    String[] ignoreProjects = []
+
+    checkstyle {
+        boolean enabled = true
+        String toolVersion = '8.6'
+        String configFile = "$project.rootDir/tools/rules-checkstyle.xml"
+        Boolean ignoreFailures = null
+        Boolean showViolations = null
+        String source = 'src'
+        List<String> include = ['**/*.java']
+        List<String> exclude = ['**/gen/**']
+    }
+    pmd {
+        boolean enabled = true
+        String toolVersion = '6.0.0'
+        String ruleSetFile = "$project.rootDir/tools/rules-pmd.xml"
+        Boolean ignoreFailures = null
+        String source = 'src'
+        List<String> include = ['**/*.java']
+        List<String> exclude = ['**/gen/**']
+    }
+    lint {
+        boolean enabled = true
+        Boolean textReport = null
+        String textOutput = 'stdout'
+        Boolean abortOnError = null
+        Boolean warningsAsErrors = null
+        Boolean checkAllWarnings = null
+        String baselineFileName = null
+        Boolean absolutePaths = null
+        File lintConfig = null
+        Boolean checkReleaseBuilds = false
+        Boolean checkTestSources = null
+        Boolean checkDependencies = null
+    }
+    ktlint {
+        boolean enabled = true
+        String toolVersion = '0.14.0'
+        boolean experimental = false
+    }
+    detekt {
+        boolean enabled = false
+        String toolVersion = '1.0.0.RC6'
+        String config = "$project.rootDir/tools/script-deteck.yml"
+        String baselineFileName = null
+        boolean failFast = true
+    }
+    cpd {
+        boolean enabled = true
+        String source = 'src'
+        String language = 'java'
+        Boolean ignoreFailures = null
+        int minimumTokenCount = 50
+    }
+    errorProne {
+        boolean enabled = true
+        String toolVersion = '2.1.3'
+    }
+    kotlin {
+        boolean allWarningsAsErrors = true
+    }
+}

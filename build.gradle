@@ -1,0 +1,26 @@
+buildscript {
+    apply from: 'versions.gradle'
+
+    addRepos(repositories)
+
+    dependencies {
+        classpath deps.android_gradle_plugin
+        classpath deps.benchmark_gradle_plugin
+        classpath deps.jacoco_gradle_plugin
+        classpath deps.junit5_gradle_plugin
+        classpath deps.kotlin.plugin
+        classpath deps.navigation_gradle_plugin
+        classpath deps.gradle_versions_plugin
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+allprojects {
+    addRepos(repositories)
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

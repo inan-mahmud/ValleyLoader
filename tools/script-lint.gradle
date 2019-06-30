@@ -1,0 +1,14 @@
+android {
+    lintOptions {
+        lintConfig file("$project.rootDir/tools/rules-lint.xml")
+        htmlOutput file("$project.buildDir/outputs/lint/lint.html")
+        // if set to true (default), stops the build if errors are found.
+        abortOnError false
+        // shows warnings as errors
+        warningsAsErrors false
+        // disable xml reporting
+        xmlReport false
+        // disable missing content description error
+        //disable 'ContentDescription'
+    }
+}

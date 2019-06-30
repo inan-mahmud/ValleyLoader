@@ -1,0 +1,46 @@
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //Core/Support
+    implementation deps.kotlin.stdlib
+    implementation deps.support.core_ktx
+    implementation deps.support.app_compat
+
+    //OkHttp3
+    implementation deps.retrofit.okhttp
+    implementation deps.retrofit.okhttp_logging_interceptor
+
+    //IO
+    //implementation deps.apache_commons
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+
+    /* Testing*/
+
+    // jUnit
+    testImplementation deps.junit.main
+    androidTestImplementation deps.junit.android_ext
+
+    // jUnit 5
+    testImplementation deps.jupiter.api
+    testRuntimeOnly deps.jupiter.engine
+    testImplementation deps.jupiter.params
+    androidTestImplementation deps.jupiter.android_core
+    androidTestRuntimeOnly deps.jupiter.android_runner
+
+    // Espresso
+    androidTestImplementation deps.espresso.rules
+    androidTestImplementation deps.espresso.runner
+    androidTestImplementation deps.espresso.core
+    androidTestImplementation deps.espresso.contrib
+    androidTestImplementation deps.espresso.intents
+
+    // Mockito
+    testImplementation deps.mockito.core
+    androidTestImplementation deps.mockito.android
+    testImplementation deps.mockito.kotlin
+    testImplementation deps.mockito.webserver
+    androidTestImplementation deps.mockito.webserver
+    testImplementation deps.json
+    androidTestImplementation deps.json
+
+}

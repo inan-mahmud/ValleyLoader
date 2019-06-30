@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Valley Loader</string>
+    <string name="home">Home</string>
+    <string name="clear_cache">Clear Cache</string>
+    <string name="details">Details</string>
+    <string name="cd_preview_image">Poster Image</string>
+    <string name="cd_avatar_image">Avatar Image</string>
+    <string name="cd_favorite">Favorite Icon</string>
+    <string name="hint_no_result">We didn\'t find anything.</string>
+    <string name="hint_nothing_to_show">Nothing to show</string>
+    <string name="refresh">Refresh</string>
+    <string name="hint_user_online">You are not online.</string>
+    <string name="hint_user_offline">You are now offline.</string>
+    <string name="ok">OK</string>
+    <string name="retry">Retry</string>
+    <string name="error_processing_request">Oops! We couldn\'t process the request.</string>
+    <string name="cache_cleared">Cache cleared</string>
+</resources>

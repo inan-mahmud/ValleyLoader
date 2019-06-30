@@ -1,0 +1,21 @@
+apply plugin: 'findbugs'
+
+task findbugs(type: FindBugs) {
+    group 'verification'
+    description 'Run findbugs'
+
+    classes = files("${project.projectDir}/build/intermediates/javac")
+
+    source 'src'
+    classpath = files()
+    effort 'max'
+    reportLevel = "high"
+    excludeFilter file("$project.rootDir/tools/rules-findbugs.xml")
+
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+
+    ignoreFailures = false
+}

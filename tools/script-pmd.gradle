@@ -1,0 +1,18 @@
+apply plugin: 'pmd'
+
+task pmd(type: Pmd) {
+    group 'verification'
+    description 'Run PMD'
+
+    ruleSetFiles = files("$project.rootDir/tools/rules-pmd.xml")
+    source 'src'
+    include '**/*.java'
+    include '**/*.kt'
+    exclude '**/gen/**'
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+
+    ignoreFailures = false
+}

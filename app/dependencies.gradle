@@ -1,0 +1,105 @@
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(path: ':valleyloader')
+
+    //Core/Support
+    implementation deps.kotlin.stdlib
+    implementation deps.support.core_ktx
+    implementation deps.support.app_compat
+    implementation deps.support.v4
+    implementation deps.multidex
+    implementation deps.support.design
+    implementation deps.constraint_layout
+    implementation deps.support.cardview
+    implementation deps.support.recyclerview
+    implementation deps.paging_ktx
+
+    //Navigation Graph
+    implementation deps.navigation.fragment_ktx
+    implementation deps.navigation.ui_ktx
+
+    //LiveData and ViewModels
+    implementation deps.lifecycle.extensions
+    implementation deps.lifecycle.viewmodel_ktx
+    implementation deps.lifecycle.reactive_steams
+
+    //Room Persistence
+    implementation deps.room.runtime
+    kapt deps.room.compiler
+    implementation deps.room.rxjava2
+
+    //Dagger
+    implementation deps.dagger.runtime
+    implementation deps.dagger.android
+    implementation deps.dagger.android_support
+    kapt deps.dagger.compiler
+    kapt deps.dagger.android_support_compiler
+
+    //Retrofit
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.rxjava
+    implementation deps.retrofit.gson
+    implementation deps.retrofit.okhttp_logging_interceptor
+
+    //RxJava
+    implementation deps.rx.java
+    implementation deps.rx.android
+    implementation deps.rx.binding
+    implementation deps.rx.binding_core
+    implementation deps.rx.binding_app_compat
+
+    //Glide
+    implementation deps.glide.runtime
+    kapt deps.glide.compiler
+    implementation deps.glide.palette
+
+    //Timber
+    implementation deps.timber
+
+    // Leak Canary
+    debugImplementation deps.leak_canary.android
+    releaseImplementation deps.leak_canary.no_op
+
+    /* Testing*/
+
+    // jUnit
+    testImplementation deps.junit.main
+    androidTestImplementation deps.junit.android_ext
+
+    // jUnit 5
+    testImplementation deps.jupiter.api
+    testRuntimeOnly deps.jupiter.engine
+    testImplementation deps.jupiter.params
+    androidTestImplementation deps.jupiter.android_core
+    androidTestRuntimeOnly deps.jupiter.android_runner
+
+    // Architecture Components Testing
+    testImplementation deps.arch_core.testing
+    androidTestImplementation deps.arch_core.testing
+
+    //Robolectric
+    testImplementation deps.robolectric
+
+    // Espresso
+    androidTestImplementation deps.espresso.rules
+    androidTestImplementation deps.espresso.runner
+    androidTestImplementation deps.espresso.core
+    androidTestImplementation deps.espresso.contrib
+    androidTestImplementation deps.espresso.intents
+
+    //Dagger Test Support
+    kaptTest deps.dagger.compiler
+    kaptAndroidTest deps.dagger.compiler
+    kaptAndroidTest deps.dagger.android_support_compiler
+
+    // Mockito
+    testImplementation deps.mockito.core
+    androidTestImplementation deps.mockito.android
+    testImplementation deps.mockito.kotlin
+    testImplementation deps.mockito.webserver
+    androidTestImplementation deps.mockito.webserver
+    testImplementation deps.json
+    androidTestImplementation deps.json
+
+}

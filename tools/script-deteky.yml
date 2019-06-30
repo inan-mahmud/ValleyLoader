@@ -1,0 +1,10 @@
+detekt {
+    reports {
+        xml {
+            enabled = false
+        }
+        html {
+            enabled = true
+        }
+    }
+}

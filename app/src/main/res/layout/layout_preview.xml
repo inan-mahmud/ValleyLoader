@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="unsplash"
+            type="com.ps.androidx.data.model.unsplash.Unsplash" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/activity_detail_root_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@android:color/white"
+        android:foreground="?android:attr/selectableItemBackgroundBorderless"
+        tools:context=".DetailActivity">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/cd_avatar_image"
+            app:avatarUrl="@{unsplash.user.profileImage.medium}"
+            app:layout_constraintBottom_toTopOf="@+id/tv_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars[4]" />
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:maxLength="10"
+            android:text="@{unsplash.user.name}"
+            app:layout_constraintBottom_toTopOf="@+id/image_preview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_avatar"
+            tools:text="Username" />
+
+        <ImageView
+            android:id="@+id/image_preview"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
+            android:layout_margin="@dimen/margin_small"
+            android:adjustViewBounds="true"
+            android:background="@drawable/shape_primary_solid"
+            android:contentDescription="@string/cd_preview_image"
+            android:scaleType="fitXY"
+            app:imageUrl="@{unsplash.urls.small}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user"
+            tools:srcCompat="@tools:sample/avatars[3]" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
