@@ -61,6 +61,10 @@ dependencies {
     debugImplementation deps.leak_canary.android
     releaseImplementation deps.leak_canary.no_op
 
+    /*CI*/
+    implementation deps.appcenter.analytics
+    implementation deps.appcenter.crashes
+
     /* Testing*/
 
     // jUnit

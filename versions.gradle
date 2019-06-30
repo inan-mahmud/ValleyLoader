@@ -6,6 +6,7 @@ ext.deps = [:]
 def versions = [:]
 versions.android_gradle_plugin = '3.4.1'
 versions.arch_core = '2.0.1'
+versions.app_center = '2.1.0'
 versions.apache = '2.6'
 versions.benchmark = '1.0.0-alpha02'
 versions.code_quality_tools = '0.18.0'
@@ -184,6 +185,11 @@ mockito.android = "org.mockito:mockito-android:$versions.mockito"
 mockito.kotlin = "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.mockito_kotlin"
 mockito.webserver = "com.squareup.okhttp3:mockwebserver:$versions.mockito_server"
 deps.mockito = mockito
+
+def appcenter = [:]
+appcenter.analytics = "com.microsoft.appcenter:appcenter-analytics:$versions.app_center"
+appcenter.crashes = "com.microsoft.appcenter:appcenter-crashes:$versions.app_center"
+deps.appcenter = appcenter
 
 def addRepos(RepositoryHandler handler) {
     handler.google()

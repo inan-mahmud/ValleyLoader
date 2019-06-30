@@ -1,6 +1,6 @@
 # Valley Loader
 
-[![AppCenter](https://build.appcenter.ms/v0.1/apps//branches/master/badge)](https://appcenter.ms/orgs/)
+[![AppCenter](https://build.appcenter.ms/v0.1/apps/bac4f383-e178-40f0-a695-c84d335f34a8/branches/master/badge)](https://build.appcenter.ms/v0.1/apps/bac4f383-e178-40f0-a695-c84d335f34a8/branches/master/badge)
 
 ### Specs
 [![API](https://img.shields.io/badge/API-15%2B-orange.svg?style=flat)](https://android-arsenal.com/api?level=16)

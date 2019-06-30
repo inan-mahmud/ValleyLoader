@@ -1,13 +1,17 @@
 package com.ps.androidx.base
 
+//import leakcanary.LeakSentry
 import android.content.Context
 import androidx.multidex.MultiDex
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 import com.ps.androidx.BuildConfig
 import com.ps.androidx.di.component.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
-//import leakcanary.LeakSentry
 import timber.log.Timber
+
 
 /**
  * Created by Prokash Sarkar on 5/22/2019.
@@ -31,6 +35,11 @@ open class BaseApplication : DaggerApplication() {
         appComponent.inject(this)
 
         //LeakSentry.config = LeakSentry.config.copy(watchFragmentViews = true)
+
+        /*AppCenter.start(
+            this, "",
+            Analytics::class.java, Crashes::class.java
+        )*/
 
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
