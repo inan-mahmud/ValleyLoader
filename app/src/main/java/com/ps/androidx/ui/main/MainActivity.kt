@@ -17,7 +17,7 @@ import com.ps.androidx.databinding.ActivityMainBinding
 import com.ps.valleyloader.cache.ByteCache
 
 /**
- * Created by Prokash Sarkar on 5/20/2019.
+ * Created by Prokash Sarkar on 6/25/2019.
  * https://github.com/prokash-sarkar
  */
 

@@ -1,7 +1,7 @@
 package com.ps.androidx.di.module.main
 
-import com.ps.androidx.ui.main.DetailsFragment
-import com.ps.androidx.ui.main.HomeFragment
+import com.ps.androidx.ui.main.fragments.DetailsFragment
+import com.ps.androidx.ui.main.fragments.HomeFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

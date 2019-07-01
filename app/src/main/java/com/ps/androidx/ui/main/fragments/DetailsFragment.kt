@@ -1,4 +1,4 @@
-package com.ps.androidx.ui.main
+package com.ps.androidx.ui.main.fragments
 
 import android.graphics.BitmapFactory
 import android.os.Bundle
@@ -16,7 +16,7 @@ import timber.log.Timber
 
 
 /**
- * Created by Prokash Sarkar on 5/20/2019.
+ * Created by Prokash Sarkar on 6/25/2019.
  * https://github.com/prokash-sarkar
  */
 

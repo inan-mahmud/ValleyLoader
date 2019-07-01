@@ -1,4 +1,4 @@
-package com.ps.androidx.ui.main
+package com.ps.androidx.ui.main.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,12 +15,13 @@ import com.ps.androidx.data.model.unsplash.Unsplash
 import com.ps.androidx.databinding.FragmentHomeBinding
 import com.ps.androidx.di.ViewModelFactory
 import com.ps.androidx.network.NetworkState
+import com.ps.androidx.ui.main.MainViewModel
 import com.ps.androidx.ui.main.adapter.UnsplashAdapter
 import javax.inject.Inject
 
 
 /**
- * Created by Prokash Sarkar on 5/20/2019.
+ * Created by Prokash Sarkar on 6/25/2019.
  * https://github.com/prokash-sarkar
  */
 
@@ -57,11 +58,11 @@ class HomeFragment : BaseFragment(), UnsplashAdapter.Callback {
 
     override fun onItemClick(unsplash: Unsplash) {
         view?.findNavController()?.navigate(
-                HomeFragmentDirections.actionHomeFragmentToDetailsFragment(
-                        unsplash.id,
-                        unsplash.likes.toString(),
-                        unsplash.urls.regular
-                )
+            HomeFragmentDirections.actionHomeFragmentToDetailsFragment(
+                unsplash.id,
+                unsplash.likes.toString(),
+                unsplash.urls.regular
+            )
         )
     }
 
