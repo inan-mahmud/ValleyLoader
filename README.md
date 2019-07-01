@@ -25,7 +25,7 @@ allprojects {
 }
 
 dependencies {
-  implementation 'com.github.prokash-sarkar:ValleyLoader:-SNAPSHOT'
+  implementation 'com.github.prokash-sarkar:ValleyLoader:v.1.0.0_alpha'
 }
 ```
 
@@ -81,7 +81,7 @@ ValleyLoader.getInstance(context).cancel(this)
   - [Retrofit](https://square.github.io/retrofit/)
   - Static code analysis tools like Lint, Checkstyle, FindBugs and PMD
   - jUnit5 + Espresso testing
-  - In an addition it also uses CircleCI to make continuous integration.
+  - In an addition it also uses AppCenter to make continuous integration.
  
  ![App Workflow](https://raw.githubusercontent.com/prokash-sarkar/ValleyLoader/master/screenshots/Screenshot_1.png)
  
