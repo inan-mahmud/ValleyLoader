@@ -58,8 +58,8 @@ dependencies {
     implementation deps.timber
 
     // Leak Canary
-    debugImplementation deps.leak_canary.android
-    releaseImplementation deps.leak_canary.no_op
+    //debugImplementation deps.leak_canary.android
+    //releaseImplementation deps.leak_canary.no_op
 
     /*CI*/
     implementation deps.appcenter.analytics
